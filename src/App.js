@@ -6,7 +6,7 @@ function App() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('https://apidios.onrender.com/enviar/generar')
+    fetch('http://localhost:8080/enviar/generar')
       .then(response => response.json())
       .then(data => setDatos(data))
       .catch(error => {
@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>📊 Recomendaciones de Investigadores</h1>
+      <h1>Recomendaciones de Investigadores</h1>
 
       {error && <p className="loading">{error}</p>}
 
